@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAB Authenticator – Privacy Policy</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
+    h1 { color: #3ecf82; }
+    h2 { color: #3ecf82; margin-top: 32px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a { color: #3ecf82; }
+    footer { margin-top: 48px; font-size: 13px; color: #999; border-top: 1px solid #eee; padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — CAB Authenticator</h1>
+  <p><strong>Last updated:</strong> April 27, 2026</p>
+  <p>
+    CAB Authenticator is a two-factor authentication app for CAB platform administrators.
+    This policy explains what data is collected, how it is used, and how it is protected.
+  </p>
+
+  <h2>1. Data We Collect</h2>
+  <ul>
+    <li><strong>Administrator credentials:</strong> your username and password are sent over an encrypted HTTPS connection to authenticate you. Your password is never stored on the device.</li>
+    <li><strong>Authentication token:</strong> a short-lived JWT issued by the CAB server after login. Stored locally on your device using the OS secure keychain (iOS Keychain / Android Keystore) via Expo SecureStore.</li>
+    <li><strong>Display name:</strong> your first and last name as returned by the server, stored locally in the secure keychain for display purposes only.</li>
+  </ul>
+
+  <h2>2. Device Features We Access</h2>
+  <ul>
+    <li><strong>Camera:</strong> used only when you choose to scan a QR code from the admin console. No images or video are recorded, stored, or transmitted.</li>
+    <li><strong>Face ID / biometric authentication:</strong> used to lock and unlock the app after a period of inactivity. Biometric data never leaves your device — it is processed entirely by iOS/Android system APIs. We have no access to it.</li>
+  </ul>
+
+  <h2>3. How We Use Your Data</h2>
+  <ul>
+    <li>To authenticate you and display your one-time login code.</li>
+    <li>To verify QR-code scan confirmations with the CAB server.</li>
+    <li>To protect your session using device-level biometrics.</li>
+  </ul>
+  <p>We do not use your data for advertising, analytics, profiling, or any purpose other than operating the app.</p>
+
+  <h2>4. Data Sharing</h2>
+  <p>
+    We do not sell, rent, or share your personal data with any third party.
+    The only external communication is with the CAB backend server
+    (<code>admin-auth-production-febd.up.railway.app</code>) over HTTPS, solely to
+    authenticate your session and deliver your login code.
+  </p>
+
+  <h2>5. Data Retention</h2>
+  <ul>
+    <li>Your authentication token and display name are stored on-device until you log out, at which point they are permanently deleted from the secure keychain.</li>
+    <li>No data is retained on our servers beyond what is necessary for active session management.</li>
+  </ul>
+
+  <h2>6. Security</h2>
+  <p>
+    All network communication uses HTTPS/TLS. Credentials are stored using the
+    platform's secure keychain (iOS Keychain / Android Keystore). The app enforces
+    a device passcode requirement and locks automatically after 5 minutes of
+    background inactivity.
+  </p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>
+    CAB Authenticator is intended for use by authorized CAB platform administrators only.
+    It is not directed at children under 13 and we do not knowingly collect data from minors.
+  </p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>
+    We may update this policy as the app evolves. Any changes will be reflected on this page
+    with an updated date. Continued use of the app after changes constitutes acceptance of the
+    revised policy.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    For any questions or requests regarding your data, contact us at:<br>
+    <a href="mailto:mohamedlaminebadji5@gmail.com">mohamedlaminebadji5@gmail.com</a>
+  </p>
+
+  <footer>
+    &copy; 2026 CAB Authenticator. All rights reserved.
+  </footer>
+</body>
+</html>
